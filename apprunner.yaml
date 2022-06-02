@@ -21,4 +21,4 @@ run:
     - name: FLASK_ENV
       value: development
     - name: DDB_AWS_REGION
-      value: "us-west-2"
+      value: "us-east-1"
