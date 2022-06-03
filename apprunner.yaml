@@ -6,7 +6,7 @@ build:
       - pip install -r requirements.txt
       - opentelemetry-bootstrap --action=install
 run:
-  command: opentelemetry-instrument python app.py
+  command: opentelemetry-instrument-flask python app.py
   network:
     port: 8080
   env:
