@@ -5,8 +5,9 @@ build:
     build:
       - pip install -r requirements.txt
       - opentelemetry-bootstrap --action=install
+  
 run:
-  command: opentelemetry-instrument-flask python app.py
+  command: opentelemetry-instrument python app.py
   network:
     port: 8080
   env:
@@ -18,7 +19,7 @@ run:
       value: urllib3
     - name: OTEL_RESOURCE_ATTRIBUTES
       value: 'service.name=votingapp'
-    - name: FLASK_ENV
-      value: development
+#     - name: FLASK_ENV
+#       value: development
     - name: DDB_AWS_REGION
       value: "us-east-1"
