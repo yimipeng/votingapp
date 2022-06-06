@@ -19,7 +19,7 @@ run:
       value: urllib3
     - name: OTEL_RESOURCE_ATTRIBUTES
       value: 'service.name=votingapp'
-#     - name: FLASK_ENV
-#       value: development
+    - name: FLASK_ENV
+      value: development
     - name: DDB_AWS_REGION
       value: "us-east-1"
